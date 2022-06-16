@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var red = 1.0
+    @State var blue = 1.0
+    @State var green = 1.0
     
     var body: some View {
         VStack {
@@ -18,11 +20,10 @@ struct ContentView: View {
                 .fontWeight(.light)
                 .padding()
             Image(systemName: "gamecontroller.fill")
-                .foregroundColor(Color(red: red, green: 0.0, blue: 0.0, opacity: 1.0))
-            HStack {
-                ColorSwatch(color: .red)
-                Slider(value: $red, in: 0...1, step: 0.1)
-            }
+                .foregroundColor(Color(red: red, green: green, blue: blue, opacity: 1.0))
+            ColorSlider(color: .red, value: $red)
+            ColorSlider(color: .green, value: $green)
+            ColorSlider(color: .blue, value: $blue)
         }
     }
 }

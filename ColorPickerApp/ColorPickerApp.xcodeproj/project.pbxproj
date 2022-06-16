@@ -12,6 +12,7 @@
 		A479D7A6285846A300FB8B09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479D7A5285846A300FB8B09 /* Assets.xcassets */; };
 		A479D7A9285846A300FB8B09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479D7A8285846A300FB8B09 /* Preview Assets.xcassets */; };
 		A479D7B028584D0A00FB8B09 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A479D7AF28584D0A00FB8B09 /* ColorSwatch.swift */; };
+		A4C1ABE1285AE5160025432A /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1ABE0285AE5160025432A /* ColorSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		A479D7A5285846A300FB8B09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A479D7A8285846A300FB8B09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A479D7AF28584D0A00FB8B09 /* ColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
+		A4C1ABE0285AE5160025432A /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				A479D7A1285846A200FB8B09 /* ColorPickerAppApp.swift */,
 				A479D7A3285846A200FB8B09 /* ContentView.swift */,
+				A4C1ABE0285AE5160025432A /* ColorSlider.swift */,
 				A479D7AF28584D0A00FB8B09 /* ColorSwatch.swift */,
 				A479D7A5285846A300FB8B09 /* Assets.xcassets */,
 				A479D7A7285846A300FB8B09 /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				A479D7A4285846A200FB8B09 /* ContentView.swift in Sources */,
 				A479D7A2285846A200FB8B09 /* ColorPickerAppApp.swift in Sources */,
+				A4C1ABE1285AE5160025432A /* ColorSlider.swift in Sources */,
 				A479D7B028584D0A00FB8B09 /* ColorSwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
