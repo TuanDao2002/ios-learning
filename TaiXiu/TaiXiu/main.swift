@@ -36,15 +36,20 @@ while (true) {
         }
         
         let inputBet = Int(bet)!
+        if (inputBet > playerMoney) {
+            print("You only have $\(playerMoney)")
+            continue;
+        }
         print("You have bet $\(inputBet)")
         
         print ("Do you want to beg big or small?(big/small)")
         var inputStr = readLine() ?? "small";
-        if (inputStr != "big" || inputStr != "small") {
+        if (inputStr != "big" && inputStr != "small") {
             inputStr = "small"
         }
         
         var sum = 0
+        dice = []
         for _ in 1...3{
             let value = Int.random(in: 1...6)
             dice.append(value)
@@ -82,6 +87,17 @@ while (true) {
         print("Do you still want continue to play?(true/false)")
         let command = readLine()
         if (command == "true") {
+            if (playerMoney == 0) {
+                print("You are out of money")
+                break
+            }
+            
+            if (houseMoney == 0) {
+                print("The house is out of money")
+                break
+            }
+            
+            round += 1
             continue
         } else {
             break
