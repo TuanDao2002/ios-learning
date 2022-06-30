@@ -51,8 +51,41 @@ while (true) {
             sum += value
         }
         
-        print("The sum of 3 dices is \(sum)!")
+        print("The dices are: ", terminator: "")
+        for index in 0...2{
+            print(dice[index], terminator: " ")
+        }
+        print("\nThe sum of 3 dices is \(sum)!")
         
+        var win = false
+        if (dice[0] == dice[1]) && (dice[0] == dice[2]) && (dice[1] == dice[2]) {
+            win = false
+        } else if (sum >= 4 && sum <= 10 && inputStr == "small") {
+            win = true
+        } else if (sum >= 11 && sum <= 17 && inputStr == "big") {
+            win = true
+        }
+    
+        if (win) {
+            playerMoney += inputBet
+            houseMoney -= inputBet
+            print("You Won $\(inputBet)!")
+        } else {
+            playerMoney -= inputBet
+            houseMoney += inputBet
+            print("You Lost $\(inputBet)!")
+        }
+        
+        print("The house has $\(houseMoney)")
+        print("The player has $\(playerMoney)")
+        
+        print("Do you still want continue to play?(true/false)")
+        let command = readLine()
+        if (command == "true") {
+            continue
+        } else {
+            break
+        }
     } else {
         print("Cannot read")
     }
