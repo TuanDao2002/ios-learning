@@ -40,6 +40,12 @@ while (true) {
             print("You only have $\(playerMoney)")
             continue;
         }
+        
+        if (inputBet > houseMoney) {
+            print("The house only has $\(houseMoney)")
+            continue
+        }
+        
         print("You have bet $\(inputBet)")
         
         print ("Do you want to beg big or small?(big/small)")
