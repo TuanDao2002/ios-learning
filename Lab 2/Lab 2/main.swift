@@ -9,30 +9,35 @@ import Foundation
 
 // ex1
 /*
-var aNumber =  Int(readLine()!)!
-
-func dayOfTheWeek(day: Int) {
+func dayOfTheWeek(day: Int) -> String {
     switch day {
     case 1:
-        print("Monday")
+        return "Monday"
     case 2:
-        print("Tuesday")
+        return "Tuesday"
     case 3:
-        print("Wednesday")
+        return "Wednesday"
     case 4:
-        print("Thursday")
+        return "Thursday"
     case 5:
-        print("Friday")
+        return "Friday"
     case 6:
-        print("Saturday")
+        return "Saturday"
     case 7:
-        print("Sunday")
+        return "Sunday"
     default:
-        print("Error")
+        return "Invalid day"
     }
 }
 
-dayOfTheWeek(day: aNumber)
+print("Enter a day of a week (1-7):")
+if let dayString = readLine(){
+    if let dayInteger = Int(dayString){
+        print("The day is \(dayOfTheWeek(day: dayInteger))")
+    } else {
+        print("Error: the correct format of day must be 1-7!")
+    }
+}
 */
 
 // ex2
@@ -54,28 +59,39 @@ funFactsRMIT["impactRankingGlobally"] = 3
 funFactsRMIT["yearFounded"] = 1887
 funFactsRMIT["numberOfStaffs"] = 9150
 
-print(funFactsRMIT["numberOfGraduates"]!)
-print(funFactsRMIT["numberStudentClubs"]!)
-print(funFactsRMIT["yearFounded"]!)
-print(funFactsRMIT["numberOfStaffs"]!)
-print(funFactsRMIT["worldUniversityRankingQS2022"]!)
- */
-
+print("Here are some fun facts of RMIT")
+print("The Number Of Graduates: \(funFactsRMIT["numberOfGraduates"]!)")
+print("The Number Student Clubs: \(funFactsRMIT["numberStudentClubs"]!)")
+print("The Year Founded: \(funFactsRMIT["yearFounded"]!)")
+print("The Number Of Staffs: \(funFactsRMIT["numberOfStaffs"]!)")
+print("The World University Ranking QS 2022: \(funFactsRMIT["worldUniversityRankingQS2022"]!)")
+print("There are \(funFactsRMIT.keys.count) facts in our fun facts dictionary about RMIT!")
+*/
+ 
 // ex3
 /*
-var studentsAndScores = ["Amy": Int(readLine()!)!, "James": Int(readLine()!)!, "Helen": Int(readLine()!)!]
-func highestScore(scores: [String: Int]) {
-    var max: Int! = studentsAndScores["Amy"]
-    for student in studentsAndScores.keys{
-        if studentsAndScores[student]! > max {
-            max = studentsAndScores[student]
-        }
+func divideIfWhole(value: Int, divisor: Int) -> Int? {
+    if value % divisor == 0 {
+        return value / divisor
     }
     
-    print(max!)
+    return nil;
 }
 
-highestScore(scores: studentsAndScores)
+print("Enter the value:")
+let value = readLine()
+print("Enter the divisor:")
+let divisor = readLine()
+
+if let valueInt = Int(value!), let divisorInt = Int(divisor!) {
+    if let result = divideIfWhole(value: valueInt, divisor: divisorInt) {
+        print("Yep, it divides \(result) times")
+    } else {
+        print("Not divisible :((")
+    }
+} else {
+    print("Error: invalid input!!!")
+}
 */
 
 // ex4
@@ -114,7 +130,45 @@ musk.isActive = false
 musk.logStatus()
 */
 
-// ex 5
+// ex5
+/*
+class Point {
+    var x: Double
+    var y: Double
+    
+    init(x: Double, y: Double) {
+        self.x = x
+        self.y = y
+    }
+    
+    func distance(target: Point) -> Double {
+        return sqrt(pow(x - target.x, 2) + pow(y - target.y, 2))
+    }
+}
+
+var coordinates1: [Double] = []
+print("Enter the first x and y:")
+coordinates1 = readLine()?.components(separatedBy: " ").compactMap({Double($0)}) ?? []
+if coordinates1.count != 2 {
+    print("Invalid input")
+    exit(0)
+}
+
+var coordinates2: [Double] = []
+print("Enter the second x and y:")
+coordinates2 = readLine()?.components(separatedBy: " ").compactMap({Double($0)}) ?? []
+if coordinates2.count != 2 {
+    print("Invalid input")
+    exit(0)
+}
+
+var point1 = Point(x: coordinates1[0], y: coordinates1[1])
+var point2 = Point(x: coordinates2[0], y: coordinates2[1])
+
+print("The distance between X and Y is \(point1.distance(target: point2))")
+*/
+ 
+// ex 6
 /*
 let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
@@ -130,8 +184,17 @@ let password = generatePassword()//Replace this comment with your code.
 print(password)
 */
 
-// ex 6
+// ex7
+/*
+func doMath(a: Int, b: Int, operation: (Int, Int) -> Int) {
+    print(operation(a, b))
+}
 
+doMath(a: 1, b: 2, operation: {n1, n2 in n1 > n2 ? n1 : n2})
+doMath(a: 10, b: 21, operation: {n1, n2 in n1 * n2})
+*/
+
+// ex 8
 /*
 var ticket: [Int] = []
 var winningNumbers: [Int] = []
@@ -220,8 +283,9 @@ while true {
 }
 */
 
-// ex6 - bonus
+// ex8 - bonus
 
+/*
 var ticket: [Int] = []
 var winningNumbers: [Int] = []
 var gamesWon = 0
@@ -284,6 +348,6 @@ print("The number of games matched all 6 numbers: \(gamesMatchAll6Nums)")
 print("Total money won: $\(totalMoneyWon)")
 print("Total ticket cost: $\(totalTicketCost)")
 print("Profit/Loss (won-cost): $\(totalMoneyWon - totalTicketCost)")
-
+*/
 
 
