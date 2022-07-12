@@ -12,7 +12,9 @@ struct ContentView: View {
         NavigationView {
             List(DataModel.data, id: \.self ) { object in
                 HStack {
-                    Image(systemName: object.icon)
+                    Image("thumbnail")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .foregroundColor(object.color)
                     Text("\(object.high)º F")
                         .foregroundColor(Color.blue)
