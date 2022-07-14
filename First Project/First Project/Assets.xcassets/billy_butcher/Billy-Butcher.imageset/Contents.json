@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "1936910_diamond_expensive_gem_gemstone_jewelry_icon.png",
+      "filename" : "Billy-Butcher.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Billy-Butcher@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Billy-Butcher@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

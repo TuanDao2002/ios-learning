@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A454634B287FF69200C2B4EE /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454634A287FF69200C2B4EE /* GifView.swift */; };
+		A454634D287FF96900C2B4EE /* pokeball.gif in Resources */ = {isa = PBXBuildFile; fileRef = A454634C287FF96900C2B4EE /* pokeball.gif */; };
 		A4B3F69A2855AF3E00C08297 /* First_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3F6992855AF3E00C08297 /* First_ProjectApp.swift */; };
 		A4B3F69C2855AF3E00C08297 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3F69B2855AF3E00C08297 /* ContentView.swift */; };
 		A4B3F69E2855AF4100C08297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B3F69D2855AF4100C08297 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A454634A287FF69200C2B4EE /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		A454634C287FF96900C2B4EE /* pokeball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pokeball.gif; path = ../../../images/pokeball.gif; sourceTree = "<group>"; };
 		A4B3F6962855AF3E00C08297 /* First Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B3F6992855AF3E00C08297 /* First_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First_ProjectApp.swift; sourceTree = "<group>"; };
 		A4B3F69B2855AF3E00C08297 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				A4B3F6992855AF3E00C08297 /* First_ProjectApp.swift */,
 				A4B3F69B2855AF3E00C08297 /* ContentView.swift */,
+				A454634A287FF69200C2B4EE /* GifView.swift */,
+				A454634C287FF96900C2B4EE /* pokeball.gif */,
 				A4B3F69D2855AF4100C08297 /* Assets.xcassets */,
 				A4B3F69F2855AF4100C08297 /* Preview Content */,
 			);
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A454634D287FF96900C2B4EE /* pokeball.gif in Resources */,
 				A4B3F6A12855AF4100C08297 /* Preview Assets.xcassets in Resources */,
 				A4B3F69E2855AF4100C08297 /* Assets.xcassets in Resources */,
 			);
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B3F69C2855AF3E00C08297 /* ContentView.swift in Sources */,
+				A454634B287FF69200C2B4EE /* GifView.swift in Sources */,
 				A4B3F69A2855AF3E00C08297 /* First_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

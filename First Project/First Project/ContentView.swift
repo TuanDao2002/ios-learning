@@ -10,18 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            Color(red: 0.03, green: 0.03, blue: 0.35).edgesIgnoringSafeArea(.all)
+            Color(.gray).edgesIgnoringSafeArea(.all)
+            GifImage("pokeball").scaledToFit()     .aspectRatio(contentMode: .fit)
             VStack{
-                Image("RMIT-logo")
+                Image("The_Boys")
                     .resizable()
+                    .padding(.horizontal, 60)
+                    .padding(.vertical, 20)
                     .aspectRatio(contentMode: .fit)
                 Spacer()
-                Text("I Am Rich")
+                Text("Oi!")
                     .font(.system(size: 40))
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
                 Spacer()
-                Image("diamond")
+                Image("Billy-Butcher")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 Spacer()
@@ -33,6 +37,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewInterfaceOrientation(.portraitUpsideDown)
+            .previewInterfaceOrientation(.portrait)
     }
 }
